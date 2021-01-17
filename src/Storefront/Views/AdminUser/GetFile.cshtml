@@ -1,0 +1,90 @@
+﻿
+<div class="con">
+    <div class="cons">
+        <!--            <h4>ADD END CUSTOMERS</h4><br />-->
+        <script>
+            $(document).ready(function () {
+                $('#myTable').DataTable();
+            });
+        </script>
+        <form method="post" action="@Url.Action("GetFile", "AdminUser") ">
+
+            <table class="table table-condensed table-striped" id="myTable">
+                <thead>
+
+                <th>Customer Name</th>
+                <th>Creation Date</th>
+                <th>Expiry Date</th>
+                <th>Subscription Friendly Name</th>
+                <th>Offer Name</th>
+                <th>Partner Center Order Id</th>
+                <th>Charge Type</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>PretaxTotal</th>
+                <th>Total</th>
+                <th>InvoiceNumber</th>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var item in ViewBag.file.PartnerManagedSubscriptions)
+                        {
+
+
+                            <tr>
+                                <td>
+                                    @item.CustomerName
+                                   
+                                     <input type="text" class="form-control" value=" @item.CustomerName" name="CustomerName"/>
+                                </td>
+                                <td>
+                                    @item.CreationDate
+                                    <input type="text" class="form-control" value="@item.CreationDate" name="CreationDate" />
+                                </td>
+                                <td>
+                                    @item.ExpiryDate
+
+                                    <input type="text" class="form-control" value="@item.ExpiryDate " name="ExpiryDate" />
+                                </td>
+                                <td>@item.SubscriptionFriendlyName
+                                 <input type="text" class="form-control" value="@item.SubscriptionFriendlyName" name="SubcriptionFriendlyName"/>
+                                </td>
+                                <td>@item.OfferName
+                                 <input type="text" class="form-control" value="@item.OfferName" name="OfferName"/>
+                                </td>
+                                <td>@item.PartnerCenterOrderId
+                                 <input type="text" class="form-control" value="@item.PartnerCenterOrderId" name="PartnerCenterOrderId"/>
+                                </td>
+                                <td>@item.ChargeType
+                                 <input type="text" class="form-control" value="@item.ChargeType" name="ChargeType"/>
+                                </td>
+                                <td>@item.UnitPrice
+                                 <input type="text" class="form-control"value="@item.UnitPrice" name="UnitPrice"/>
+                                </td>
+                                <td>@item.Quantity
+                                 <input type="text" class="form-control" value=" @item.Quantity" name="Quantity"/>
+                                </td>
+                                <td>@item.PretaxTotal
+                                 <input type="text" class="form-control" value="@item.PretaxTotal" name="PreTaxTotal"/>
+                                </td>
+                                <td>@item.Total
+                                 <input type="text" class="form-control"value="@item.Total" name="AfterTaxTotal"/>
+                                </td>
+                                <td>@item.InvoiceNumber
+                                 <input type="text" class="form-control" value="@item.InvoiceNumber" name="InvoiceNumber"/>
+                                </td>
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+
+
+    </div>
+</div>

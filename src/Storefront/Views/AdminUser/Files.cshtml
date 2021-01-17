@@ -1,0 +1,107 @@
+﻿
+<div class="con">
+    <div class="cons">
+        <!--            <h4>ADD END CUSTOMERS</h4><br />-->
+        <script>
+            $(document).ready(function () {
+                $('#myTable').DataTable(
+                    {
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'copy', 'csv', 'excel', 'pdf', 'print'
+                        ]
+                    }
+
+                );
+            });
+        </script>
+        <form method="post" action="@Url.Action("GetFile", "AdminUser") ">
+
+            <table class="table table-condensed table-striped" id="myTable">
+                <thead>
+
+                <th>Customer Name</th>
+                <th>Creation Date</th>
+                <th>Expiry Date</th>
+                <th>Subscription Friendly Name</th>
+                <th>Offer Name</th>
+                <th>Partner Center Order Id</th>
+                <th>Charge Type</th>
+                @*<th>Unit Price</th>*@
+                <th>Quantity</th>
+                @*<th>PretaxTotal</th>
+                <th>Total</th>
+                <th>InvoiceNumber</th>*@
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var item in ViewBag.allFiles)
+                        {
+
+
+                            <tr>
+                                <td>
+                                    @item.CustomerName
+
+                                    
+                                </td>
+                                <td>
+                                    @item.CreationDate
+                                   
+                                </td>
+                                <td>
+                                    @item.ExpiryDate
+
+                                   
+                                </td>
+                                <td>
+                                    @item.SubcriptionFriendlyName
+                               
+                            </td>
+                            <td>
+                                @item.OfferName
+                           
+                        </td>
+                        <td>
+                            @item.PartnerCenterOrderId
+                      
+                    </td>
+                    <td>
+                        @item.ChargeType
+                   
+                </td>
+                @*<td>
+                    @item.UnitPrice
+               
+            </td>*@
+            <td>
+                @item.Quantity
+            
+        </td>
+        @*<td>
+            @item.PreTaxTotal
+       
+    </td>
+    <td>
+        @item.AfterTaxTotal
+    
+</td>
+<td>
+    @item.InvoiceNumber
+
+</td>*@
+</tr>
+}
+
+                    }
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+
+
+    </div>
+</div>

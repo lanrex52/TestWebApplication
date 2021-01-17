@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Microsoft.Store.PartnerCenter.Storefront.Models.MicrosoftOffer>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Offer Name</th>
+                    <th>Offer Description</th>
+                    <th>Offer Price</th>
+                    <th>Offer ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.Offer.
+                            @item.Offer.Name
+                        </td>
+                        <td>
+                            @item.Offer.Description
+                        </td>
+                        <td>
+                            @item.Offer.Billing
+                        </td>
+                        <td>
+                            @item.Offer.Id
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,70 @@
+﻿<script>
+    $(document).ready(function () {
+        SetClass();
+    });
+
+    function SetClass() {
+        localStorage.ClassName = "active";
+        $(".cost").addClass(localStorage.ClassName);
+    }
+</script>
+
+
+<!-- Invoice -->
+<div class="invoice">
+    <h6 class="alert alert-info" style="padding:.5rem;">Order History</h6>
+
+    <div class="table-responsive">
+
+        <table class="table" id="myTable">
+            <thead>
+            <th>Customer Name</th>
+            <th>Creation Date</th>
+            <th>Expiry Date</th>
+            <th>Subscription Friendly Name</th>
+            <th>Offer Name</th>
+            <th>Partner Center Order ID</th>
+            <th>Charge Type</th>
+            <th>Unit Price</th>
+            <th>Qunatity</th>
+            <th>PretaxTotal</th>
+            <th>Total</th>
+            <th>InvoiceNumber</th>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in ViewBag.viewmodel.PartnerManagedSubscriptions)
+                    {
+
+                        <tr>
+                            <td> @item.CustomerName</td>
+                            <td>@item.CreationDate</td>
+                            <td>@item.ExpiryDate</td>
+                            <td>@item.SubscriptionFriendlyName</td>
+                            <td>@item.OfferName</td>
+                            <td>@item.PartnerCenterOrderId</td>
+                            <td>@item.ChargeType</td>
+                            <td>@item.UnitPrice</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.PretaxTotal</td>
+                            <td>@item.Total</td>
+                            <td>@item.InvoiceNumber</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+
+
+
+</div>
+
+
+<!-- End of Invoice -->

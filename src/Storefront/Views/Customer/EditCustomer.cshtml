@@ -1,0 +1,86 @@
+﻿@{
+    var cutomer = ViewBag.BillingProfile;
+    var id = ViewBag.ClientId;
+}
+
+<script>
+    $(document).ready(function () {
+        SetClass();
+    });
+
+    function SetClass() {
+        localStorage.ClassName = "active";
+        $(".new").addClass(localStorage.ClassName);
+    }
+</script>
+<!-- New Customer -->
+<div class="invoice">
+    <h5>ADD END CUSTOMER</h5>
+
+    <form method="post" action="@Url.Action("EditCustomer", "Customer")">
+        <div class="formGrid">
+            <div class="forms">
+                <h6 class="alert alert-primary">EDIT CUSTOMER INFORMATION</h6>
+                @*<div class="col-md-12 form-group">
+                        <input type="text" name="companyname" placeholder="Company *" class="form-control">
+                    </div>*@
+            <div class="col-md-12 form-group">
+                <input type="text" name="address1" value="@cutomer.DefaultAddress.AddressLine1" placeholder="Street Address 1" class="form-control" required>
+                <input type="text" name="clientId"value="@id" class="form-control">
+            </div>
+                <div class="col-md-12 form-group">
+                    <input type="text" name="address2" value="@cutomer.DefaultAddress.AddressLine2" placeholder="Street Address 2" class="form-control" required>
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <select name="country" class="form-control" required>
+                        <option value="@cutomer.DefaultAddress.Country"></option>
+                        <option disabled>Select Country</option>
+                        <option value="Nigeria">Nigeria</option>
+
+                    </select>
+                </div>
+                <div class="col-md-12 form-group">
+                    <select name="city" class="form-control" required>
+                        <option value="@cutomer.DefaultAddress.City"></option>
+                        <option>Select City</option>
+                        <option>Lagos</option>
+                        <option>Ikeja</option>
+                    </select>
+                </div>
+                <div class="col-md-12 form-group">
+                    <input type="text" name="zip" value="@cutomer.DefaultAddress.PostalCode" placeholder="Postal Code" class="form-control" required>
+                </div>
+                <div class="col-md-12 form-group">
+                    <input type="number" name="phone" value="@cutomer.DefaultAddress.PhoneNumber" placeholder="Phone Number" class="form-control" required>
+                </div>
+            </div>
+
+
+            <div class="forms">
+                <h6 class="alert alert-info">PERSONAL INFORMATION</h6>
+                <div class="col-md-12 form-group">
+                    <input type="text" name="firstname" value="@cutomer.DefaultAddress.FirstName" placeholder="First Name *" class="form-control" required>
+                </div>
+                <div class="col-md-12 form-group">
+                    <input type="text" name="lastname" value="@cutomer.DefaultAddress.LastName" placeholder="Last Name *" class="form-control" required>
+                </div>
+                <div class="col-md-12 form-group">
+                    <input type="email" name="email" value="@cutomer.Email" placeholder="Email Address *" class="form-control" required>
+                </div>
+                @*<div class="col-md-12 form-group">
+                        <input type="text" name="domainname" placeholder="Domain Prefix *" class="form-control">
+                    </div>*@
+                @*<div class="col-md-12 form-group">
+                        <input type="text" name="username" placeholder="Username *" class="form-control">
+                    </div>*@
+                <div class="col-md-5 form-group float-right">
+                    <input type="submit" name="submit" value="Save End Customer" class="btn btn-info btn-block">
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<!-- End of Invoice -->

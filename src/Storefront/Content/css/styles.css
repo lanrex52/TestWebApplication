@@ -1,0 +1,423 @@
+/* login Screen */
+*{
+    box-sizing: border-box;
+}
+.login{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 5rem;
+}
+
+.loginContainer{
+    width: 35%;
+    height: auto;
+    display: block;
+    border: 1px solid #640ad2;
+    border-radius: 10px;
+    /* margin: 0 auto; */
+    box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.02),
+    0px 2px 4px -2px rgba(0,0,0,0.08),
+    0px 4px 8px -4px rgba(0,0,0,0.10),
+    0px 8px 16px -8px rgba(0,0,0,0.12);
+    padding: 0;
+    background:  #640ad2;
+    padding: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.logo{
+    width: 100%;
+    height: 7rem;
+    color: white;
+
+}
+.logo img{
+    max-height: 5rem;
+}
+.loginbtn{
+    width: 100%;
+    height: 10rem;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+/* End of Login Screen */
+
+/* Dashboard */
+.app{
+width: 100%;
+height: auto;
+display: block;
+padding: 0;
+margin: 0;
+}
+/* Navigation */
+.appNav{
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    background: #640ad2;
+    float: left;
+}
+.controls{
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    color: white;
+}
+.navLinks{
+    width: 100%;
+    height: auto;
+}
+.navLinks ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.navLinks ul a{
+    color: white;
+    text-decoration: none;
+}
+.navLinks ul a li{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    line-height: 1.5rem;
+    padding: 1rem;
+    font-size: 12px;
+}
+
+.active{
+    background: rgba(43, 2, 97, 0.8);
+}
+
+/* End of NAvigation */
+/* AppContents */
+.appContents{
+    width: 85%;
+    height: auto;
+    min-height: 100vh;
+    margin-left: 15%;
+    float: left;
+    background: whitesmoke;
+}
+/* TopNav */
+.toggle{
+    width: 2rem;
+    height: 2rem;
+    background: #640ad2;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.02),
+    0px 2px 4px -2px rgba(0,0,0,0.08),
+    0px 4px 8px -4px rgba(0,0,0,0.10),
+    0px 8px 16px -8px rgba(0,0,0,0.12);
+    padding: .3rem;
+    display: none;
+}
+.topNav{
+width: 100%;
+height: 3rem;
+padding: .5rem;
+border-bottom: 1px solid gainsboro;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 70% 5% 5% 5% 15%;
+}
+.circle{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid gainsboro;
+    text-align: center;
+    padding-top: .2rem;
+    float: left;
+}
+.circle span{
+    position: absolute;
+    margin-top: -.3rem;
+    font-size: 8px;
+}
+.circles{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    background: white;
+    /* border: 1px solid gainsboro; */
+    text-align: center;
+}
+.circle img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.circles .circle{
+    padding-top: 0;
+    border: 0;
+}
+.circles a{
+    font-size: 12px;
+}
+/* End of TopNAv */
+
+/* InfoCard */
+.infoCard{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 1rem;
+}
+.grids{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 20px;
+}
+.infoCards{
+    width: 100%;
+    height: 10rem;
+    background: white;
+    box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.02),
+    0px 2px 4px -2px rgba(0,0,0,0.08),
+    0px 4px 8px -4px rgba(0,0,0,0.10),
+    0px 8px 16px -8px rgba(0,0,0,0.12);
+}
+.igrid{
+    display: grid;
+    grid-template-columns: 70% 30%; 
+}
+.iContents{
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
+}
+.iContents .circle{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: white;
+  background: rgba(100, 10, 210, 0.1);
+    text-align: center;
+    padding-top: 1rem;
+    float: left;
+    border: 0;
+    text-align: center;
+}
+.iContents .circle i{
+   color: #640ad2;
+   font-size: 16px;
+}
+
+/* Invoice */
+.invoice{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+.invoice table{
+    font-size: 12px;
+}
+.invoice td a{
+    font-size: 9px;
+}
+
+.formGrid{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 30px; 
+}
+.forms{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+.rows{
+    display: none;
+}
+.one{
+    display: none;
+}
+.two{
+    display: none;
+}
+.actives{
+    display: block;
+}
+
+
+/* End of Invoice */
+/* End of Dashboard */
+
+/* Responsiveness */
+
+@media (max-height: 500px) {
+    .appNav{
+        width: 100%;
+        position: relative;
+        display: none;
+     }
+     .toggle{
+         display: block;
+     }
+     .appNav.show{
+         display: block;
+     }
+     .appContents{
+         width: 100%;
+         margin-left: 0;
+     }
+     /* TopNav */
+     .topNav{
+     width: 100%;
+     height: 3rem;
+     padding: .5rem;
+     border-bottom: 1px solid gainsboro;
+     }
+     .grid{
+         display: grid;
+         grid-template-columns: 10% 30% 10% 10% 10% 0%;
+     }
+     .grids{
+         display: grid;
+         grid-template-columns: 100%;
+         grid-gap: 10px;
+     }
+  
+     .formGrid{
+         display: grid;
+         grid-template-columns: 100%;
+         grid-gap: 30px; 
+     }
+  }
+  
+  @media (max-width: 640px) {
+    .appNav{
+       width: 100%;
+       position: relative;
+       display: none;
+    }
+    .toggle{
+        display: block;
+    }
+    .appNav.show{
+        display: block;
+    }
+    .appContents{
+        width: 100%;
+        margin-left: 0;
+    }
+    /* TopNav */
+    .topNav{
+    width: 100%;
+    height: 3rem;
+    padding: .5rem;
+    border-bottom: 1px solid gainsboro;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 10% 30% 10% 10% 10% 0%;
+    }
+    .grids{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 10px;
+    }
+ 
+    .formGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 30px; 
+    }
+  }
+  
+  @media (max-height: 600px) {
+    .appNav{
+        width: 100%;
+        position: relative;
+        display: none;
+     }
+     .toggle{
+         display: block;
+     }
+     .appNav.show{
+         display: block;
+     }
+     .appContents{
+         width: 100%;
+         margin-left: 0;
+     }
+     /* TopNav */
+     .topNav{
+     width: 100%;
+     height: 3rem;
+     padding: .5rem;
+     border-bottom: 1px solid gainsboro;
+     }
+     .grid{
+         display: grid;
+         grid-template-columns: 10% 30% 10% 10% 10% 0%;
+     }
+     .grids{
+         display: grid;
+         grid-template-columns: 100%;
+         grid-gap: 10px;
+     }
+  
+     .formGrid{
+         display: grid;
+         grid-template-columns: 100%;
+         grid-gap: 30px; 
+     }
+  }
+  
+  @media (max-width: 640px) {
+    .appNav{
+        width: 100%;
+        position: relative;
+        display: none;
+     }
+     .toggle{
+         display: block;
+     }
+     .appNav.show{
+         display: block;
+     }
+     .appContents{
+         width: 100%;
+         margin-left: 0;
+     }
+     /* TopNav */
+     .topNav{
+     width: 100%;
+     height: 3rem;
+     padding: .5rem;
+     border-bottom: 1px solid gainsboro;
+     }
+     .grid{
+         display: grid;
+         grid-template-columns: 10% 30% 10% 10% 10% 0%;
+     }
+     .grids{
+         display: grid;
+         grid-template-columns: 100%;
+         grid-gap: 10px;
+     }
+  
+     .formGrid{
+         display: grid;
+         grid-template-columns: 100%;
+         grid-gap: 30px; 
+     }
+        
+  }
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+ 
+        
+  }

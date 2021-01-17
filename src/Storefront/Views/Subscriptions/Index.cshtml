@@ -1,0 +1,85 @@
+﻿<script>
+    $(document).ready(function () {
+        SetClass();
+    });
+
+    function SetClass() {
+        localStorage.ClassName = "active";
+        $(".sub").addClass(localStorage.ClassName);
+    }
+</script>
+<!-- Invoice -->
+<div class="invoice">
+    <h6 class="alert alert-info" style="padding:.5rem;">END CUSTOMER SUBSCRIPTION - Lotus Beta Analytics</h6>
+
+    @*<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Add Subscription</button>
+    <br><br>*@
+    <!-- Popup Form -->
+    @*<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Subscription</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <select name="" class="form-control">
+                                <option value="">Select Product</option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Quantity:</label>
+                            <input type="number" class="form-control" placeholder="Quantity" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input type="submit" name="submit" value="Add Subscription" class="btn btn-danger btn-block">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>*@
+
+
+    <!-- End of Popup Form -->
+
+    <div class="table-responsive">
+        <table class="table" id="myTable">
+            <thead>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in ViewBag.allFiles.PartnerManagedSubscriptions)
+                    {
+                        <tr>
+                            <td>@item.OfferName</td>
+                            <td>@item.Quantity Licenses</td>
+                            <td>@item.Status</td>
+                        </tr>
+
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+
+
+
+</div>
+
+
+<!-- End of Invoice -->

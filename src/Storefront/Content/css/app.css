@@ -1,0 +1,419 @@
+.appContainer {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    padding: 5rem;
+    background: url(../img/borrower-2.jpg);
+    background-size: cover;
+    padding-bottom: 2rem;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: slideBg 10s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    background-repeat: no-repeat;
+}
+
+@keyframes slideBg {
+    0% {
+        background: url(../img/borrower-2.jpg)no-repeat;
+        background-size: cover;
+    }
+
+    25% {
+        background: url(../img/slider-bg.jpg)no-repeat;
+        background-size: cover;
+    }
+
+    50% {
+        background: url(../img/petty-trader.jpg)no-repeat;
+        background-size: cover;
+    }
+
+    75% {
+        background: url(../img/petty-trader.jpg)no-repeat;
+        background-size: cover;
+    }
+
+    100% {
+        background: url(../img/slider-bg.jpg)no-repeat;
+        background-size: cover;
+    }
+}
+
+/*Login Container*/
+.login {
+    width: 35%;
+    height: 30rem;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    padding-top: 0;
+}
+
+.reg {
+    width: 35%;
+    height: 25rem;
+    display: block;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    padding-top: 0;
+}
+.validation {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    padding-top: 0;
+}
+
+.validation .loginForm input[type="text"],
+[type="password"] {
+    height: 2rem;
+    border: none;
+    font-size: 12px;
+        
+}
+
+.logo {
+    width: 100%;
+    height: 8rem;
+}
+
+.logo img {
+    max-height: 8rem;
+}
+
+.loginForm {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem
+}
+.Form {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem
+}
+
+.loginForm span {
+    background: rgba(40, 177, 87, 1);
+    color: white;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    padding-top: 1rem;
+    border-radius: 0;
+    border: none
+}
+
+.loginForm input[type="text"],
+[type="password"] {
+    height: 3rem;
+    padding-left: 3.3rem;
+    border: 1px solid rgba(40, 177, 87, 1);
+    font-size: 12px
+}
+
+.loginForm label {
+    font-size: 12px;
+    color: forestgreen
+}
+
+.loginForm a {
+    font-size: 12px;
+    color: forestgreen
+}
+
+/*End of Login Container*/
+
+/*Dashboard Container*/
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+.tog{display: none;}
+.navigation {
+    width: 13%;
+    height: 100vh;
+    position: fixed;
+    background: white;
+}
+
+.navigation .logo {
+    padding: 0.5rem
+}
+
+.links {
+    width: 100%;
+    height: 20rem;
+}
+
+.links ul {
+    width: 100%;
+    padding: 0;
+    margin: 0
+}
+.links ul a{
+   text-decoration: none;
+}
+.category{
+    display: none;
+}
+.category.show{
+    display: block;
+}
+.category.active{
+    display: block;
+}
+
+.links ul li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 50px;
+    padding-left: 1rem;
+    font-size: 12px;
+    color: black;
+}
+.links ul li:hover{
+    background: rgba(40, 177, 87, 0.6);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.dashboard.active{
+   background: rgba(40, 177, 87, 1); 
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 2rem;
+}
+.cat.active{
+background: rgba(40, 177, 87, 1); 
+    color: white;
+    padding-left: 2rem;
+     border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.rbiz.active{
+   background: rgba(40, 177, 87, 0.7); 
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 2rem;
+}
+.offer.active{
+   background: rgba(40, 177, 87, 0.7); 
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 2rem;
+}
+.ind.active{
+   background: rgba(40, 177, 87, 0.7); 
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 1rem;
+}
+
+.contentRight {
+    width: 87%;
+    height: 100%;
+    display: inline-block;
+    overflow: auto;
+    margin-left: 13%;
+    padding: .5rem;
+}
+
+.large {
+    width: 72%;
+    height: 100%;
+    float: left;
+}
+.medium {
+    width: 28%;
+    height: 100%;
+    float: left;
+    padding: 1rem;
+}
+
+.date{
+  width: 100%;
+ 
+}
+
+.topNav {
+    width: 100%;
+    padding: 1rem;
+    height: 5rem;
+}
+.medium img{
+ width: 80%
+}
+
+.contents {
+/*
+    width: 100%;
+    height: 100%;
+    */
+    padding: 1.5rem;
+
+}
+.topCard{width: 100%;height: 15rem;}
+
+.mcard {
+    width: 30%;
+    height: 5rem;
+    padding: .5rem;
+    float: left;
+    margin: 10px;
+    box-shadow: 0 8px 10px 0 rgba(220, 220, 220, .24), 0 10px 20px 0 rgba(220, 220, 220, .19);
+}
+
+.circle {
+    width: 30%;
+    height: 4rem;
+    background: rgba(40, 177, 87, 1);
+    border-radius: 50%;
+    padding: 1rem;
+    float: left;
+}
+
+.circle span {
+    font-size: 2rem;
+    color: white;
+}
+
+.figures {
+    width: 70%;
+    height: 4rem;
+    padding: .2rem;
+    float: left;
+    padding-left: 1rem;
+}
+
+.smContents {
+    width: 100%;
+    height: 10rem;
+}
+
+.smCards {
+    width: 18%;
+    height: 7rem;
+    padding: 1rem;
+    float: left;
+    margin: 10px;
+    box-shadow: 0 8px 10px 0 rgba(220, 220, 220, .24), 0 10px 20px 0 rgba(220, 220, 220, .19);
+    color: rgba(40, 177, 87, 1);
+    padding-top: 1.5rem;
+    margin: 10px;
+}
+.smCards:hover{background:rgba(40, 177, 87, 1);color: white;transform: scale(1.1)}
+
+.smCards span {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.smCards p {
+    font-size: 12px;
+}
+
+/*End of Dashboard*/
+
+/*SmartPhones potrait Screen Css goes here*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .appContainer {
+        padding: 0.5rem;
+        padding-top: 1rem;
+         height: 100%;
+    display: block;
+    overflow: auto;
+    }
+    .tog{display: block;}
+.login {
+ width: 100%;
+    }
+.reg {
+ width: 100%;
+    }
+.loginForm {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: auto;
+    padding: 1rem
+}
+    
+.navigation {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: white;
+    display: none;
+    z-index: 9999;
+}
+        
+.navigation.show {
+    display: block;
+}
+    .navigation.off {
+    display: none;
+}
+.contentRight {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    overflow: auto;
+    margin-left: 0%;
+    padding: .5rem;
+}
+.large {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: block;
+    overflow: auto;
+}
+.medium {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 1rem;
+}
+.mcard {
+    width: 100%;
+    height: 6rem;
+    
+}
+.circle {
+    width: 30%;
+    height: 5rem;
+    padding-top: 1.5rem;
+}
+    .smCards {
+    width: 100%;
+    height: 7rem;
+}
+
+
+}
+
+
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {}
+
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {}
+
+
+/* iPads Potrait ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {}

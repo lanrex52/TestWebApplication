@@ -1,0 +1,50 @@
+﻿@model Microsoft.Store.PartnerCenter.Storefront.Models.PreApprovedCustomersViewModel
+@{
+    int i = 1;
+ }
+<div class="con">
+    <div class="cons">
+        <!--            <h4>ADD END CUSTOMERS</h4><br />-->
+        <script>
+            $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+        </script>
+
+        <table class="table table-condensed table-striped" id="myTable">
+            <thead>
+
+            <th>S/N</th>
+            <th>Customer</th>
+            <th>Domain</th>
+            <th>Tenant ID</th>
+            <th>Actions</th>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model.Items)
+                    {
+
+
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.CompanyName</td>
+                        <td>@item.Domain</td>
+                        <td>@item.TenantId</td>
+                        <td>
+                           
+                            <a href="/AdminUser/GetFile/@item.TenantId" class="btn btn-sm btn-info" style="width: 15%;height: 2rem;padding: .3rem;float: left"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-sm btn-warning" style="width: 15%;height: 2rem;padding: .3rem;float: left;"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-sm btn-danger" style="width: 15%;height: 2rem;padding: .3rem;float: left;"><i class="fa fa-times"></i></a>
+                        </td>
+                    </tr>
+                        i++;
+                    }
+
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

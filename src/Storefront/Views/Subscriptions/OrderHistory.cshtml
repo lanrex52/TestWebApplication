@@ -1,0 +1,58 @@
+﻿<script>
+    $(document).ready(function () {
+        SetClass();
+    });
+
+    function SetClass() {
+        localStorage.ClassName = "active";
+        $(".order").addClass(localStorage.ClassName);
+    }
+</script>
+<!-- Invoice -->
+
+
+<div class="invoice">
+    <h6 class="alert alert-info" style="padding:.5rem;">Order History</h6>
+
+
+    <div class="table-responsive">
+        <table class="table" id="myTable">
+            <thead>
+            <th>ID</th>
+            <th>Time Ordered</th>
+            <th>Currency</th>
+            <th>Billing Frequency</th>
+            <th>Number of Items</th>
+            <th>Order Status</th>
+            <th>Total Price</th>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in ViewBag.orderDetails.PartnerManagedOrders)
+                    {
+                        <tr>
+                            <td>@item.OrderID</td>
+                            <td>@item.TimeOrdered</td>
+                            <td>@item.Currency</td>
+                            <td>@item.BillingFrequency</td>
+                            <td>@item.NumberOfItems</td>
+                            <td>@item.OrderStatus</td>
+                            <td>-</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+
+
+
+</div>
+
+

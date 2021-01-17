@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="POSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar(max)" />
+          <Property Name="CreationDate" Type="nvarchar(max)" />
+          <Property Name="ExpiryDate" Type="nvarchar(max)" />
+          <Property Name="SubcriptionFriendlyName" Type="nvarchar(max)" />
+          <Property Name="OfferName" Type="nvarchar(max)" />
+          <Property Name="PartnerCenterOrderId" Type="nvarchar(max)" />
+          <Property Name="ChargeType" Type="nvarchar" MaxLength="50" />
+          <Property Name="UnitPrice" Type="nvarchar(max)" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="50" />
+          <Property Name="PreTaxTotal" Type="nvarchar" MaxLength="50" />
+          <Property Name="AfterTaxTotal" Type="nvarchar" MaxLength="50" />
+          <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="POSModelStoreContainer">
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="POSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExpiryDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SubcriptionFriendlyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OfferName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerCenterOrderId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ChargeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PreTaxTotal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AfterTaxTotal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="POSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tables" EntityType="Self.Table" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="POSModelStoreContainer" CdmEntityContainer="POSEntities">
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="POSModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="SubcriptionFriendlyName" ColumnName="SubcriptionFriendlyName" />
+                <ScalarProperty Name="OfferName" ColumnName="OfferName" />
+                <ScalarProperty Name="PartnerCenterOrderId" ColumnName="PartnerCenterOrderId" />
+                <ScalarProperty Name="ChargeType" ColumnName="ChargeType" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="PreTaxTotal" ColumnName="PreTaxTotal" />
+                <ScalarProperty Name="AfterTaxTotal" ColumnName="AfterTaxTotal" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

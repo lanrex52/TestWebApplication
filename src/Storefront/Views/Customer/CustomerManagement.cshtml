@@ -1,0 +1,61 @@
+﻿@model Microsoft.Store.PartnerCenter.Storefront.Models.PreApprovedCustomersViewModel
+    @{ 
+        int i = 1;
+    }
+<script>
+    $(document).ready(function () {
+        SetClass();
+    });
+
+    function SetClass() {
+        localStorage.ClassName = "active";
+        $(".customer").addClass(localStorage.ClassName);
+    }
+</script>
+
+<!-- Invoice -->
+<div class="invoice">
+    <h6 class="alert alert-info" style="padding:.5rem;">RECENT INVOICE</h6>
+    <div class="table-responsive">
+        <table class="table" id="myTable">
+            <thead>
+            <th>S/N</th>
+
+            <th>Name</th>
+            <th>Domain Name</th>
+            
+            <th>Tenant Id</th>
+            <th>Actions</th>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.CompanyName</td>
+                            <td>@item.Domain</td>
+                            <td>@item.TenantId</td>
+                            <td>
+                                <!-- <a href="#" class="btn btn-sm btn-dark"><i class="fa fa-toggle-on"></i>&nbsp;&nbsp;Activate</a> -->
+
+                                <a href="~/Customer/EditCustomer/@item.TenantId" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i>&nbsp;&nbsp;Edit</a>
+                                <a href="~/Subscriptions/Index/@item.TenantId" class="btn btn-sm btn-success"><i class="fa fa-money"></i>&nbsp;&nbsp;Subscription</a>
+                                <a href="~/Subscriptions/OrderHistory/@item.TenantId" class="btn btn-sm btn-info"><i class="fa fa-link"></i>&nbsp;&nbsp;Order History</a>
+                                <a href="~/Subscriptions/ServiceCosts/@item.TenantId" class="btn btn-sm btn-info"><i class="fa fa-link"></i>&nbsp;&nbsp;Service Costs</a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+                $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+
+<!-- End of Invoice -->

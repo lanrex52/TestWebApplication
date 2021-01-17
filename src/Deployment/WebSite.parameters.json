@@ -1,0 +1,50 @@
+{
+  "azureStorageConnectionEndpointSuffix": {
+    "value": "core.windows.net"
+  },
+  "hostingPlanName": {
+    "value": "Free"
+  },
+  "partnerCenterApplicationId": {
+    "value": "c175223c-27c7-4aad-90f3-668642cb6cd0"
+  },
+  "partnerCenterApplicationSecret": {
+    "value": "8GKpg/n+aL8NrQfRyc3crq9oOX9QDSP/kO+JGNJwbIk="
+  },
+  "partnerCenterAadTenantId": {
+    "value": "39dab133-5d7b-4bec-8eca-7f89b173e27f"
+  },
+  "webPortalClientId": {
+    "value": "1c6f2c62-8767-4a01-b31d-b46ffee3e5c9"
+  },
+  "webPortalClientSecret": {
+    "value": "Tk.UJG-aNeo3-gJtr.0CeR~JDGd7KoF035"
+  },
+  "webPortalAadTenantId": {
+    "value": "39dab133-5d7b-4bec-8eca-7f89b173e27f"
+  },
+  "aadAuthorityEndpoint": {
+    "value": "https://login.microsoftonline.com/"
+  },
+  "graphEndpoint": {
+    "value": "https://graph.windows.net"
+  },
+  "partnerCenterApiEndPoint": {
+    "value": "https://api.partnercenter.microsoft.com"
+  },
+  "skuName": {
+    "value": "F1"
+  },
+  "skuCapacity": {
+    "value": 1
+  },
+  "webSiteName": {
+    "value": "lbanstorefront"
+  },
+  "CustomerPortalPackageFolder": {
+    "value": "Storefront"
+  },
+  "CustomerPortalPackageFileName": {
+    "value": "package.zip"
+  }
+}
